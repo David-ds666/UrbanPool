@@ -1,0 +1,316 @@
+/* =====================================================
+   HELP / SUPPORT CENTER
+   ===================================================== */
+
+.help-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ── HERO ─────────────────────────────────────── */
+.help-hero {
+  text-align: center;
+  padding: 56px 0 40px;
+}
+
+.help-hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.help-hero>p {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
+/* Search */
+.help-search {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.help-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.help-search input {
+  width: 100%;
+  padding: 16px 48px 16px 44px;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.help-search input:focus {
+  border-color: #000;
+}
+
+.help-search-clear {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e5e7eb;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── CATEGORIES ──────────────────────────────── */
+.help-categories {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.help-cat-card {
+  text-align: center;
+  padding: 28px 14px;
+  border-radius: 16px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.help-cat-card:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.help-cat-card:hover p {
+  color: #a1a1aa;
+}
+
+.help-cat-active {
+  background: #000;
+  color: #fff;
+}
+
+.help-cat-active p {
+  color: #a1a1aa;
+}
+
+.help-cat-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.help-cat-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.help-cat-card p {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  transition: color 0.25s ease;
+}
+
+/* ── FAQ LIST (link style, not accordion) ──────── */
+.help-faqs {
+  margin-bottom: 48px;
+}
+
+.help-faq-group {
+  margin-bottom: 28px;
+}
+
+.help-faq-group-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.help-faq-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.2s;
+}
+
+.help-faq-link:hover {
+  background: #000;
+  color: #fff;
+  transform: translateX(4px);
+  border-color: #000;
+}
+
+.help-faq-arrow {
+  font-size: 18px;
+  color: #9ca3af;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.help-faq-link:hover .help-faq-arrow {
+  color: #fff;
+}
+
+/* No results */
+.help-no-results {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.help-no-results span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.help-no-results h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.help-no-results p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ── CONTACT SECTION ─────────────────────────── */
+.help-contact {
+  text-align: center;
+  padding: 48px 0 0;
+  border-top: 2px solid #f0f0f0;
+}
+
+.help-contact>h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.help-contact>p {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
+.help-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.help-contact-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 28px 20px;
+  transition: all 0.25s ease;
+}
+
+.help-contact-card:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.help-contact-card:hover p,
+.help-contact-card:hover .help-contact-detail {
+  color: #a1a1aa;
+}
+
+.help-contact-card:hover .help-contact-btn {
+  background: #fff;
+  color: #000;
+}
+
+.help-contact-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.help-contact-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.help-contact-card p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 8px;
+  transition: color 0.25s;
+}
+
+.help-contact-detail {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 14px;
+  transition: color 0.25s;
+}
+
+.help-contact-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 768px) {
+  .help-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .help-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-hero h1 {
+    font-size: 28px;
+  }
+
+  .help-cat-icon {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .help-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

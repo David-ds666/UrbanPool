@@ -1,0 +1,297 @@
+/* =====================================================
+   HELP ARTICLE DETAIL PAGE
+   ===================================================== */
+
+.ha-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+}
+
+/* ── BREADCRUMB ─────────────────────────────── */
+.ha-breadcrumb {
+    padding: 20px 0;
+    font-size: 13px;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.ha-breadcrumb-link {
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.15s;
+}
+
+.ha-breadcrumb-link:hover {
+    color: #000;
+}
+
+.ha-breadcrumb-sep {
+    color: #d1d5db;
+}
+
+.ha-breadcrumb-current {
+    color: #374151;
+    font-weight: 500;
+}
+
+/* ── MAIN LAYOUT ────────────────────────────── */
+.ha-main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* ── ARTICLE ────────────────────────────────── */
+.ha-article {
+    background: #fff;
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ha-category-badge {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.ha-article h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.ha-answer {
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.8;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Tips */
+.ha-tips {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ha-tips h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.ha-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ha-tips li {
+    position: relative;
+    padding: 8px 0 8px 24px;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.ha-tips li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: 700;
+}
+
+/* Feedback */
+.ha-feedback {
+    padding: 24px 0 0;
+}
+
+.ha-feedback>p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+.ha-feedback-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.ha-feedback-btn {
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 2px solid #e5e7eb;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ha-feedback-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.ha-thank-you {
+    font-size: 15px;
+    color: #059669;
+    font-weight: 600;
+}
+
+/* ── SIDEBAR ────────────────────────────────── */
+.ha-sidebar {
+    position: sticky;
+    top: 80px;
+}
+
+.ha-sidebar h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.ha-related-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    font-size: 14px;
+    color: #374151;
+    transition: all 0.2s;
+}
+
+.ha-related-link:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ha-related-arrow {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.ha-sidebar-cta {
+    margin-top: 24px;
+    padding: 24px;
+    background: #000;
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.ha-sidebar-cta h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.ha-sidebar-cta p {
+    font-size: 13px;
+    color: #a1a1aa;
+    margin-bottom: 14px;
+}
+
+.ha-contact-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ha-contact-btn:hover {
+    background: #f3f4f6;
+}
+
+/* ── BOTTOM NAV ──────────────────────────────── */
+.ha-bottom-nav {
+    margin-top: 32px;
+}
+
+.ha-back-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ha-back-btn:hover {
+    background: #1a1a1a;
+}
+
+/* ── EMPTY STATE ─────────────────────────────── */
+.ha-empty {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.ha-empty span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.ha-empty h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.ha-empty p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 768px) {
+    .ha-main {
+        grid-template-columns: 1fr;
+    }
+
+    .ha-sidebar {
+        position: static;
+    }
+
+    .ha-article {
+        padding: 24px;
+    }
+
+    .ha-article h1 {
+        font-size: 22px;
+    }
+}

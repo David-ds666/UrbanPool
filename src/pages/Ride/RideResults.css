@@ -1,0 +1,391 @@
+/* =====================================================
+   RIDE RESULTS PAGE
+   Split layout: left panel + right map
+   ===================================================== */
+
+.rr-page {
+  display: flex;
+  height: calc(100vh - 64px);
+  background: #f9fafb;
+}
+
+/* ── LEFT PANEL ──────────────────────────────── */
+.rr-panel {
+  width: 420px;
+  min-width: 380px;
+  padding: 28px 24px 24px;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── TRIP SUMMARY ────────────────────────────── */
+.rr-trip {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.rr-trip-route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+  gap: 2px;
+}
+
+.rr-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.rr-dot.green {
+  background: #22c55e;
+}
+
+.rr-dot.red {
+  background: #ef4444;
+}
+
+.rr-line {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  background: #d1d5db;
+}
+
+.rr-trip-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rr-trip-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.rr-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.5px;
+}
+
+.rr-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 2px;
+}
+
+/* Meta (date + time) */
+.rr-meta {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.rr-meta span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ── HEADING ─────────────────────────────────── */
+.rr-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px;
+}
+
+/* ── RIDE CARDS ──────────────────────────────── */
+.rr-rides {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.rr-ride-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rr-ride-card:hover {
+  background: #f9fafb;
+}
+
+.rr-ride-card.rr-active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.rr-ride-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rr-ride-icon {
+  font-size: 26px;
+  width: 40px;
+  text-align: center;
+}
+
+.rr-ride-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.rr-ride-card p {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.rr-ride-card.rr-active p {
+  color: #a1a1aa;
+}
+
+.rr-ride-right {
+  text-align: right;
+}
+
+.rr-ride-price {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+
+.rr-ride-eta {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.rr-ride-card.rr-active .rr-ride-eta {
+  color: #a1a1aa;
+}
+
+.rr-match-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: #fef2f2;
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  border: 1px solid #fee2e2;
+  animation: pulse 2s infinite;
+}
+
+.rr-ride-card.rr-active .rr-match-badge {
+  background: #331111;
+  border-color: #442222;
+  color: #f87171;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ── BOOK BUTTON ─────────────────────────────── */
+.rr-book-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.rr-book-btn:hover {
+  background: #1a1a1a;
+}
+
+.rr-book-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── MAP ─────────────────────────────────────── */
+.rr-map {
+  flex: 1;
+}
+
+.rr-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.rr-distance {
+  font-weight: 600;
+  color: #4b5563 !important;
+}
+
+.rr-ride-card.rr-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.8);
+  pointer-events: none;
+}
+
+.rr-ride-card.rr-disabled:hover {
+  background: transparent;
+}
+
+.rr-book-btn.rr-btn-disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.rr-unavailable-msg {
+  padding: 32px 20px;
+  text-align: center;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.rr-unavailable-msg .warning-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.rr-unavailable-msg p {
+  color: #c53030;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.secondary-btn {
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background: #f7fafc;
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 768px) {
+  .rr-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .rr-panel {
+    width: 100%;
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .rr-map {
+    height: 300px;
+  }
+}
+
+/* ── SURGE PRICING BANNER ─────────────────────── */
+.rr-surge-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 1px solid #f59e0b;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  animation: surgeBannerPulse 2s ease-in-out infinite;
+}
+
+@keyframes surgeBannerPulse {
+  0%, 100% { box-shadow: 0 0 0px rgba(245, 158, 11, 0); }
+  50% { box-shadow: 0 0 16px rgba(245, 158, 11, 0.2); }
+}
+
+.rr-surge-icon {
+  font-size: 24px;
+  animation: surgePulse 1.2s ease-in-out infinite;
+}
+
+@keyframes surgePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.15); }
+}
+
+.rr-surge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rr-surge-text strong {
+  font-size: 14px;
+  color: #92400e;
+}
+
+.rr-surge-text span {
+  font-size: 12px;
+  color: #b45309;
+}
+
+/* Surge price display */
+.rr-price-original {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.rr-price-surge {
+  color: #dc2626;
+  font-weight: 800;
+}
+
+.rr-ride-card.rr-active .rr-price-original {
+  color: #71717a;
+}
+
+.rr-ride-card.rr-active .rr-price-surge {
+  color: #fbbf24;
+}

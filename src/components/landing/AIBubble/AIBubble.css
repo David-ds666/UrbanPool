@@ -1,0 +1,45 @@
+.ai-bubble {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.ai-popup {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.ai-popup-header {
+  background: black;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.ai-popup-body {
+  padding: 16px;
+  font-size: 14px;
+  color: #333;
+}

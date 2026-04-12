@@ -1,0 +1,125 @@
+/* WRAPPER keeps heading tight to card */
+.plan-wrapper {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+}
+
+/* PLAN FOR LATER TITLE */
+.plan-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px; /* 🔥 Uber-tight spacing */
+}
+
+/* GRID */
+.plan-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* MAIN CARD */
+.plan-card {
+  background: #b6d7de;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT */
+.plan-left {
+  max-width: 460px;
+}
+
+.plan-left h3 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.plan-sub {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* INPUTS */
+.plan-inputs {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.plan-inputs input,
+.plan-inputs select {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+/* BUTTON */
+.plan-btn {
+  width: 310px;
+  height: 44px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.plan-right img {
+  width: 260px;
+}
+
+/* BENEFITS */
+.plan-benefits {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.plan-benefits h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.plan-benefits li {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.plan-terms {
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .plan-section {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .plan-right {
+    margin-top: 20px;
+  }
+
+  .plan-btn {
+    width: 100%;
+  }
+}

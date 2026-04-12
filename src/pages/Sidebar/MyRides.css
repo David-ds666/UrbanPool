@@ -1,0 +1,254 @@
+.rides-container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.rides-header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 24px;
+}
+
+.header-content h1 {
+  font-size: 32px;
+  color: #111827;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.header-content p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 16px;
+}
+
+.rides-filter {
+  display: flex;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 6px;
+  border-radius: 14px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn.active {
+  background: white;
+  color: #111827;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rides-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.ride-card {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #f3f4f6;
+  padding: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.ride-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: #e5e7eb;
+}
+
+.ride-badge {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #9ca3af;
+  background: #f9fafb;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.ride-main {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.route-viz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.node.start { background: #10b981; border: 3px solid #d1fae5; }
+.node.end { background: #ef4444; border: 3px solid #fee2e2; }
+
+.connector {
+  width: 2px;
+  height: 40px;
+  background: repeating-linear-gradient(to bottom, #d1d5db 0, #d1d5db 4px, transparent 4px, transparent 8px);
+}
+
+.route-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.location-group h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.timestamp {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b82f6;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.price-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.ride-price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.ride-status {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ride-status.completed { background: #ecfdf5; color: #065f46; }
+.ride-status.cancelled { background: #fef2f2; color: #991b1b; }
+
+.ride-footer {
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ride-id {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.ride-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.ride-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ride-btn.primary {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+.ride-btn.secondary {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.ride-btn:hover {
+  transform: translateY(-2px);
+}
+
+.empty-rides {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.empty-rides h3 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.empty-rides p {
+  color: #6b7280;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .rides-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .ride-main {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .price-status {
+    align-items: flex-start;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 16px;
+    width: 100%;
+  }
+}

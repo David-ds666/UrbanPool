@@ -1,0 +1,172 @@
+.city-page {
+  padding: 40px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.city-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.city-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.city-header p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.city-form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+}
+
+.city-section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.city-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.city-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.city-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.city-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-col label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.city-input {
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+
+.city-input:focus {
+  border-color: #000000;
+  background: #ffffff;
+}
+
+.v-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.v-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.v-card.selected {
+  border-color: #000000;
+  background: #f8fafc;
+}
+
+.v-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.v-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+}
+
+.v-price {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.city-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.city-total span {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.city-total strong {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.city-submit {
+  width: 100%;
+  padding: 16px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.city-submit:hover {
+  background: #000000;
+}
+
+.city-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .city-row {
+    flex-direction: column;
+  }
+  .v-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

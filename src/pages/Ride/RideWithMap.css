@@ -1,0 +1,135 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* PAGE */
+.ride-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f6f6f6;
+}
+
+/* HEADER */
+.ride-header {
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.black-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* BODY */
+.ride-body {
+  flex: 1;
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+  min-height: 0; /* 🔑 VERY IMPORTANT */
+}
+
+/* LEFT CARD */
+.ride-card {
+  width: 360px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.ride-card h2 {
+  margin-bottom: 16px;
+}
+
+.ride-card input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 0 14px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.row select {
+  flex: 1;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 0 12px;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+  width: 100%;
+  height: 48px;
+  background: #000;          /* BLACK */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search-btn:hover {
+  background: #111;
+}
+
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* MAP */
+.map-container {
+  flex: 1;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden; /* 🔑 rounded map */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  min-height: 0; /* 🔑 prevents map drop */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

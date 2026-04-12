@@ -1,0 +1,211 @@
+.airport-page {
+  padding: 40px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.airport-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.airport-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.airport-header p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.airport-form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+}
+
+.airport-section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.airport-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.airport-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+/* Toggle Switch */
+.airport-toggle {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.airport-toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.airport-toggle-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.airport-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.airport-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.airport-col label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.airport-input {
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+
+.airport-input:focus {
+  border-color: #000000;
+  background: #ffffff;
+}
+
+/* Flight Note */
+.flight-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 6px;
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.v-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.v-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.v-card.selected {
+  border-color: #000000;
+  background: #f8fafc;
+}
+
+.v-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.v-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+}
+
+.v-price {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.airport-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.airport-total span {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.airport-total strong {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.airport-submit {
+  width: 100%;
+  padding: 16px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.airport-submit:hover {
+  background: #000000;
+}
+
+.airport-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .airport-row {
+    flex-direction: column;
+  }
+  .v-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

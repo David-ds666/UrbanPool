@@ -1,0 +1,129 @@
+.notifications-container {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.notif-header h1 {
+  font-size: 28px;
+  color: #111827;
+  margin: 0;
+}
+
+.clear-all {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notif-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  border: 1px solid #f3f4f6;
+  transition: all 0.2s;
+}
+
+.notif-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.notif-card.ride_confirmed { border-left: 4px solid #10b981; }
+.notif-card.driver_arriving { border-left: 4px solid #3b82f6; }
+.notif-card.promo { border-left: 4px solid #f59e0b; }
+
+.notif-icon {
+  width: 44px;
+  height: 44px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.notif-body {
+  flex: 1;
+}
+
+.notif-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.notif-title-row h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.notif-time {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.notif-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.notif-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.notif-card:hover .notif-close {
+  opacity: 1;
+}
+
+.empty-notif {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.empty-bell {
+  font-size: 64px;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

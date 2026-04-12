@@ -1,0 +1,787 @@
+/* =====================================================
+   OFFER RIDE v2 — Premium Design
+   ===================================================== */
+
+.or2-page {
+  min-height: calc(100vh - 64px);
+  background: #f8fafc;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* ── Hero Header ── */
+.or2-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
+  padding: 40px 20px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.or2-hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.or2-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.or2-hero-text h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.or2-hero-text p {
+  font-size: 15px;
+  color: #94a3b8;
+}
+
+.or2-hero-tabs {
+  display: flex;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 6px;
+}
+
+.or2-hero-tabs button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: #94a3b8;
+  transition: all 0.2s;
+}
+
+.or2-hero-tabs button.active {
+  background: white;
+  color: #0f172a;
+}
+
+/* ── Body Layout ── */
+.or2-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ── 2-column layout ── */
+.or2-main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ── Progress ── */
+.or2-progress-wrap {
+  margin-bottom: 28px;
+}
+
+.or2-steps-label {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.or2-steps-label span {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.or2-steps-label span.step-active {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.or2-steps-label span.step-done {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.or2-progress-bar {
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.or2-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #0ea5e9);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+/* ── Form Card ── */
+.or2-card {
+  background: white;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #f1f5f9;
+}
+
+.or2-card-header {
+  margin-bottom: 32px;
+}
+
+.or2-step-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+.or2-card-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.or2-card-header p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ── Fields ── */
+.or2-field {
+  margin-bottom: 22px;
+}
+
+.or2-field label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.or2-field input[type="text"],
+.or2-field input[type="number"],
+.or2-field input[type="date"],
+.or2-field input[type="time"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0f172a;
+  background: #fafafa;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.or2-field input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.08);
+  background: white;
+}
+
+.or2-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── Counter ── */
+.or2-counter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px 16px;
+  width: fit-content;
+}
+
+.or2-counter button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: all 0.15s;
+  color: #0f172a;
+}
+
+.or2-counter button:hover {
+  background: #0f172a;
+  color: white;
+}
+
+.or2-counter span {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  min-width: 24px;
+  text-align: center;
+}
+
+.or2-counter-hint {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #94a3b8 !important;
+}
+
+/* ── Suggest / Hints ── */
+.or2-suggest-btn {
+  margin-left: auto;
+  background: #eff6ff;
+  color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.or2-suggest-btn:hover {
+  background: #dbeafe;
+}
+
+.or2-earnings-hint {
+  display: block;
+  font-size: 13px;
+  color: #22c55e;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ── Distance Banner ── */
+.or2-dist-banner {
+  background: linear-gradient(90deg, #eff6ff, #f0fdf4);
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.or2-dist-banner.loading {
+  color: #64748b;
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+/* ── Preferences Grid ── */
+.or2-prefs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.or2-pref-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #fafafa;
+  color: #64748b;
+  user-select: none;
+}
+
+.or2-pref-tag:hover {
+  border-color: #94a3b8;
+  background: white;
+}
+
+.or2-pref-tag.selected {
+  border-color: #0f172a;
+  background: #0f172a;
+  color: white;
+}
+
+/* ── Buttons ── */
+.or2-btn-primary {
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.or2-btn-primary:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15,23,42,0.25);
+}
+
+.or2-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.or2-btn-outline {
+  background: transparent;
+  color: #0f172a;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.or2-btn-outline:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.or2-next-btn {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.or2-btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.or2-btn-row .or2-btn-primary {
+  flex: 1;
+}
+
+/* ── Review Grid ── */
+.or2-review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.or2-review-item {
+  background: white;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.or2-review-item .label {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.or2-review-item .value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.or2-review-prefs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.or2-pref-chip {
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 99px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Earnings Banner ── */
+.or2-earnings-banner {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border: 1px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  color: #166534;
+}
+
+.or2-earnings-banner strong {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.or2-earnings-banner .sub {
+  font-size: 13px;
+  color: #4ade80;
+  margin-left: auto;
+}
+
+/* ── Right Info Column ── */
+.or2-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.or2-info-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.or2-info-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.or2-how-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.or2-how-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.or2-how-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.or2-how-step strong {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.or2-how-step p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.or2-tips-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.or2-tips-card ul li {
+  font-size: 13px;
+  color: #475569;
+  padding-left: 18px;
+  position: relative;
+}
+
+.or2-tips-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* ── Earnings Calculator ── */
+.or2-calc-card {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.or2-calc-card h3 {
+  color: white;
+}
+
+.or2-calc-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.or2-calc-row.total {
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.or2-calc-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 12px 0;
+}
+
+/* ── Success State ── */
+.or2-success {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 36px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.or2-success-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.or2-success h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.or2-success p {
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 32px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.or2-success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ── My Offers ── */
+.or2-offers-section {
+  max-width: 760px;
+}
+
+.or2-offers-header {
+  margin-bottom: 28px;
+}
+
+.or2-offers-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.or2-offers-header p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.or2-offer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.or2-offer-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s;
+}
+
+.or2-offer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.or2-offer-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.or2-route-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.or2-route-dot.from {
+  background: #22c55e;
+}
+
+.or2-route-dot.to {
+  background: #ef4444;
+}
+
+.or2-route-line {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+  border-top: 2px dashed #e2e8f0;
+}
+
+.or2-route-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.or2-offer-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.or2-offer-status {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.or2-offer-status.open {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.or2-offer-status.full {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+/* ── Loading / Empty ── */
+.or2-loading {
+  text-align: center;
+  color: #64748b;
+  padding: 60px;
+  font-size: 15px;
+}
+
+.or2-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #64748b;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.or2-empty span {
+  font-size: 52px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.or2-empty h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.or2-empty p {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .or2-main {
+    grid-template-columns: 1fr;
+  }
+
+  .or2-info-col {
+    display: none;
+  }
+
+  .or2-prefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .or2-row {
+    grid-template-columns: 1fr;
+  }
+
+  .or2-review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .or2-success-actions {
+    flex-direction: column;
+  }
+}

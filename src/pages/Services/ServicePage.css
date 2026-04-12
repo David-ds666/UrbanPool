@@ -1,0 +1,669 @@
+/* =====================================================
+   SHARED SERVICE PAGE TOKENS & LAYOUTS
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Page wrapper ── */
+.svc-page {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.svc-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.svc-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.svc-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.svc-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            var(--svc-accent, #000) 0%,
+            rgba(0, 0, 0, 0.75) 100%);
+    z-index: 1;
+}
+
+.svc-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 32px;
+    width: 100%;
+}
+
+.svc-hero-text {
+    color: #fff;
+    max-width: 600px;
+}
+
+.svc-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.svc-hero-text h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.svc-hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+/* ── CTA BUTTONS ── */
+.svc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #111;
+    padding: 14px 32px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.svc-btn-primary:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.svc-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--svc-accent, #000);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.svc-btn-secondary:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ── SECTION ── */
+.svc-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 32px;
+}
+
+.svc-section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.svc-section-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.svc-section-header p {
+    font-size: 16px;
+    color: #64748b;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ── STEPS ── */
+.svc-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.svc-step {
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: 20px;
+    background: #f8fafc;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.svc-step:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.svc-step-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--svc-accent, #000);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 auto 16px;
+}
+
+.svc-step h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.svc-step p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ── FEATURE CARDS ── */
+.svc-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-feature-card {
+    padding: 32px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.svc-feature-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: var(--svc-accent, #000);
+}
+
+.svc-feature-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--svc-accent-light, #f0f9ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.svc-feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.svc-feature-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ── STATS BAR ── */
+.svc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 48px 32px;
+    background: var(--svc-accent, #000);
+    border-radius: 24px;
+}
+
+.svc-stat {
+    text-align: center;
+    color: #fff;
+}
+
+.svc-stat-value {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.svc-stat-label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ── BOTTOM CTA ── */
+.svc-cta {
+    background: #f8fafc;
+    padding: 80px 32px;
+}
+
+.svc-cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.svc-cta-inner h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.svc-cta-inner p {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+.svc-cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── POPULAR ROUTES / GRID CARD ── */
+.svc-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.svc-grid-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.svc-grid-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.svc-grid-card-body {
+    padding: 20px;
+}
+
+.svc-grid-card-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.svc-grid-card-body p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.svc-grid-card-price {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--svc-accent, #000);
+}
+
+/* ── TIMELINE ── */
+.svc-timeline {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 20px 0;
+}
+
+.svc-timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 200px;
+    position: relative;
+}
+
+.svc-timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    background: var(--svc-accent, #000);
+    opacity: 0.3;
+}
+
+.svc-timeline-dot {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--svc-accent, #000);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.svc-timeline-step h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.svc-timeline-step p {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* ── PACKAGE CARDS (Courier) ── */
+.svc-package-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-package-card {
+    padding: 32px;
+    border-radius: 20px;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.svc-package-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: var(--svc-accent, #f59e0b);
+}
+
+.svc-package-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.svc-package-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.svc-package-card .pkg-dims {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.svc-package-card .pkg-price {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--svc-accent, #f59e0b);
+}
+
+/* ── VEHICLE CARDS (Rentals) ── */
+.svc-vehicle-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-vehicle-card {
+    padding: 28px;
+    border-radius: 20px;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.svc-vehicle-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: var(--svc-accent, #10b981);
+}
+
+.svc-vehicle-icon {
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+.svc-vehicle-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.svc-vehicle-card .v-seats {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.svc-vehicle-card .v-price {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.svc-vehicle-card .v-rate {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--svc-accent, #10b981);
+}
+
+.svc-vehicle-card .v-per {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ── INCLUDED LIST (Rentals) ── */
+.svc-included {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.svc-included-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.svc-included-item span:first-child {
+    font-size: 20px;
+}
+
+/* ── QUICK BOOK CARD (Bike) ── */
+.svc-quickbook {
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.svc-quickbook h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.svc-quickbook input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+}
+
+.svc-quickbook input:focus {
+    outline: none;
+    border-color: var(--svc-accent, #ec4899);
+}
+
+.svc-quickbook .svc-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+/* ── ECO STATS (Bike) ── */
+.svc-eco-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    text-align: center;
+}
+
+.svc-eco-card {
+    padding: 32px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+}
+
+.svc-eco-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.svc-eco-card .eco-val {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--svc-accent, #ec4899);
+    margin-bottom: 4px;
+}
+
+.svc-eco-card .eco-label {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1024px) {
+    .svc-hero-content {
+        padding: 60px 24px;
+    }
+
+    .svc-hero-text h1 {
+        font-size: 38px;
+    }
+
+    .svc-steps,
+    .svc-features,
+    .svc-grid-cards,
+    .svc-package-cards,
+    .svc-vehicle-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .svc-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .svc-eco-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .svc-hero {
+        min-height: 400px;
+    }
+
+    .svc-hero-text h1 {
+        font-size: 30px;
+    }
+
+    .svc-section {
+        padding: 48px 20px;
+    }
+
+    .svc-section-header h2 {
+        font-size: 28px;
+    }
+
+    .svc-steps,
+    .svc-features,
+    .svc-grid-cards,
+    .svc-package-cards,
+    .svc-vehicle-cards,
+    .svc-eco-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .svc-stats {
+        grid-template-columns: 1fr 1fr;
+        padding: 32px 20px;
+    }
+
+    .svc-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .svc-timeline-step:not(:last-child)::after {
+        display: none;
+    }
+
+    .svc-included {
+        grid-template-columns: 1fr;
+    }
+
+    .svc-cta-inner h2 {
+        font-size: 28px;
+    }
+}

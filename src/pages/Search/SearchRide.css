@@ -1,0 +1,96 @@
+/* Page — works both standalone and embedded */
+.search-page {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f9fafb;
+}
+
+/* Card */
+.search-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.search-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+/* Sub text */
+.search-card p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+.search-card input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-card input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.08);
+}
+
+/* Date + Time row */
+.search-card .row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.search-card .row input {
+  margin-bottom: 0;
+}
+
+/* Primary button (BLACK THEME) */
+.search-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.search-card button:hover {
+  background: #1a1a1a;
+}
+
+.search-card button:active {
+  transform: scale(0.98);
+}
+
+/* Error */
+.search-error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}

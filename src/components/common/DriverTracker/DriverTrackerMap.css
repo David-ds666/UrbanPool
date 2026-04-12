@@ -1,0 +1,104 @@
+.tracker-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #eaeaea;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracker-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f9fafb;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.tracker-status-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.driver-avatar {
+  background: #000;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.driver-info strong {
+  font-size: 16px;
+  color: #111827;
+}
+
+.driver-info span {
+  font-size: 13px;
+  color: #22c55e;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.tracker-car-plate {
+  background: #fef08a;
+  color: #854d0e;
+  border: 1px solid #facc15;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.tracker-map-container {
+  height: 280px;
+  width: 100%;
+  position: relative;
+}
+
+/* Fallback UI */
+.tracker-placeholder {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 24px;
+  text-align: center;
+}
+
+.tracker-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.tracker-placeholder h4 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: #374151;
+}
+
+.tracker-placeholder p {
+  color: #6b7280;
+  font-size: 14px;
+  max-width: 300px;
+  margin: 0;
+}
