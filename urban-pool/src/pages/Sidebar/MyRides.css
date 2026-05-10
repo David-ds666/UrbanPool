@@ -1,0 +1,410 @@
+/* ── Page container ── */
+.rides-container {
+  padding: 40px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ── Header ── */
+.rides-header {
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-content h1 {
+  font-size: 32px;
+  color: #111827;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.header-content p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* ── Filter bar ── */
+.rides-filter {
+  display: flex;
+  gap: 6px;
+  background: #f3f4f6;
+  padding: 5px;
+  border-radius: 14px;
+}
+
+.filter-btn {
+  padding: 9px 18px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-btn.active {
+  background: white;
+  color: #111827;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Filter badge (Active count) */
+.filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #111;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* ── 2-column grid ── */
+.rides-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ── Ride card ── */
+.ride-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+  padding: 22px 24px;
+  position: relative;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ride-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-color: #e5e7eb;
+}
+
+/* Active ride — highlighted border */
+.ride-card.active-ride {
+  border: 2px solid #111;
+  background: #fafafa;
+}
+
+/* Active banner */
+.active-ride-banner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+  animation: pulse-green 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.5); }
+}
+
+/* Card top row: banner left, date right — prevents date/price overlap */
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Date chip — in-flow, not absolute */
+.ride-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  background: #f3f4f6;
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* ── Main section: route + price ── */
+.ride-main {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.route-viz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.node {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.node.start { background: #10b981; border: 2px solid #d1fae5; }
+.node.end   { background: #ef4444; border: 2px solid #fee2e2; }
+
+.connector {
+  width: 2px;
+  height: 32px;
+  background: repeating-linear-gradient(
+    to bottom, #d1d5db 0, #d1d5db 4px, transparent 4px, transparent 8px
+  );
+}
+
+.route-details {
+  flex: 1;
+  min-width: 0;          /* allow truncation */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.location-group h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.timestamp {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+/* Price + status aligned right */
+.price-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.ride-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.ride-status {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ride-status.completed        { background: #ecfdf5; color: #065f46; }
+.ride-status.cancelled        { background: #fef2f2; color: #991b1b; }
+.ride-status.confirmed,
+.ride-status.driver-assigned,
+.ride-status.in-progress      { background: #f0fdf4; color: #166534; }
+
+/* ── Driver info row ── */
+.ride-driver-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #374151;
+  padding: 8px 10px;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.driver-avatar-sm {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.driver-vehicle-sm {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+/* ── Footer: ID + buttons ── */
+.ride-footer {
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ride-id {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.ride-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ride-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ride-btn.primary {
+  background: #111;
+  color: #fff;
+  border: none;
+}
+
+.ride-btn.secondary {
+  background: #fff;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.ride-btn:hover { transform: translateY(-1px); }
+
+/* Complete ride CTA */
+.ride-btn.complete-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.ride-btn.complete-btn:hover:not(:disabled) {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.ride-btn.complete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Empty state ── */
+.empty-rides {
+  grid-column: 1 / -1;   /* span full width in grid */
+  text-align: center;
+  padding: 100px 0;
+}
+
+.empty-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.empty-rides h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.empty-rides p { color: #6b7280; }
+
+/* ── Loading ── */
+.rr-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.rides-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes spin    { to { transform: rotate(360deg); } }
+@keyframes fadeIn  { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .rides-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .rides-container { padding: 24px 16px; }
+  .rides-header { flex-direction: column; align-items: flex-start; }
+  .location-group h4 { max-width: 180px; }
+}

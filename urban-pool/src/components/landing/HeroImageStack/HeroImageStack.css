@@ -1,0 +1,193 @@
+/* ── Contained Peek Carousel ── */
+.hero-carousel {
+  position: relative;
+  width: 80%;
+  height: 440px;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.hero-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Each card ── */
+.hero-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Center (active) ── */
+.hero-card.center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 5;
+  cursor: default;
+}
+
+/* ── Left (previous — peeking ~20% from left edge) ── */
+.hero-card.left {
+  transform: translateX(-78%) scale(0.9);
+  opacity: 0.55;
+  z-index: 3;
+  filter: brightness(0.6);
+  cursor: pointer;
+}
+
+.hero-card.left:hover {
+  opacity: 0.75;
+  filter: brightness(0.75);
+}
+
+/* ── Right (next — peeking ~20% from right edge) ── */
+.hero-card.right {
+  transform: translateX(78%) scale(0.9);
+  opacity: 0.55;
+  z-index: 3;
+  filter: brightness(0.6);
+  cursor: pointer;
+}
+
+.hero-card.right:hover {
+  opacity: 0.75;
+  filter: brightness(0.75);
+}
+
+/* ── Hidden (all others) ── */
+.hero-card.hidden {
+  transform: translateX(0) scale(0.7);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Navigation Arrows ── */
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.2s, transform 0.2s;
+}
+
+.hero-carousel:hover .hero-nav {
+  opacity: 1;
+}
+
+.hero-nav:hover {
+  background: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-nav-left {
+  left: 10px;
+}
+
+.hero-nav-right {
+  right: 10px;
+}
+
+/* ── Dot Indicators ── */
+.hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.hero-dot.active {
+  background: #fff;
+  border-color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.hero-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Utility classes for parent layout ── */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-carousel {
+    width: 100%;
+    height: 260px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    opacity: 1;
+  }
+
+  .hero-dots {
+    bottom: 10px;
+    gap: 5px;
+  }
+
+  .hero-dot {
+    width: 6px;
+    height: 6px;
+  }
+}

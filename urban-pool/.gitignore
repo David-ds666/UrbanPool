@@ -11,17 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-.env
-.env.*
-!.env.example
-
-# Build/cache output
-coverage
-.vite
-.cache
-
-# OS metadata
-.DS_Store
 
 # Editor directories and files
 .vscode/*
